@@ -2,14 +2,19 @@ package com.bitwisor.sekura.uitls
 
 import android.content.Context
 import android.content.Context.SENSOR_SERVICE
+import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.media.MediaPlayer
+import android.net.Uri
 import androidx.core.content.ContextCompat.getSystemService
+import androidx.core.content.ContextCompat.startActivity
 import androidx.work.Worker
 import androidx.work.WorkerParameters
+import com.bitwisor.sekura.EmergencyActivity
+import com.bitwisor.sekura.MainActivity
 import com.bitwisor.sekura.R
 import java.util.*
 import kotlin.math.sqrt
@@ -17,6 +22,7 @@ import kotlin.math.sqrt
 
 class ShakeWorker (appContext: Context, workerParams: WorkerParameters):
     Worker(appContext, workerParams) {
+    var context = appContext
     var sensorManager: SensorManager? = null
     var acceleration = 0f
     var currentAcceleration = 0f
@@ -63,9 +69,16 @@ class ShakeWorker (appContext: Context, workerParams: WorkerParameters):
             // acceleration value is over 12
             if(acceleration > 50){
                 triggerAlarm()
+                triggerCall()
             }
         }
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {}
+    }
+
+    private fun triggerCall() {
+        val i= Intent(context,EmergencyActivity::class.java)
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        context.startActivity(i)
     }
 
     private fun triggerAlarm() {
@@ -73,18 +86,7 @@ class ShakeWorker (appContext: Context, workerParams: WorkerParameters):
         mediaPlayer.start()
     }
 
-//    override fun onResume() {
-//        sensorManager?.registerListener(sensorListener, sensorManager!!.getDefaultSensor(
-//            Sensor .TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL
-//        )
-//        super.onResume()
-//    }
 
-
-//    override fun onPause() {
-//        sensorManager!!.unregisterListener(sensorListener)
-//        super.onPause()
-//    }
 
 
 }

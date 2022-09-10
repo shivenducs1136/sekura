@@ -69,6 +69,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/white_bottomround_card"
                     android:padding="25dp"
+                    android:id="@+id/callbtn"
                     >
                 <TextView
                     android:layout_width="wrap_content"
