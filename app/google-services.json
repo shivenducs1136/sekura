@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "924014123530",
+    "project_id": "sekura-c7e20",
+    "storage_bucket": "sekura-c7e20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924014123530:android:3df98b5778e5bb79a01df3",
+        "android_client_info": {
+          "package_name": "com.bitwisor.sekura"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924014123530-kko4ml6m6ffsb70s0pps8n5915nu11k0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz09Q5qHIXj3Dr6DjFiQ2-eTd2ujNEG4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924014123530-kko4ml6m6ffsb70s0pps8n5915nu11k0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
