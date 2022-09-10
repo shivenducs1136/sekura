@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "924014123530-o8j1ghaogu40le4ogu54lmejehg3ib72.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bitwisor.sekura",
+            "certificate_hash": "9cde00952756aad360b7bb30c9154e6915e2d1c4"
+          }
+        },
+        {
           "client_id": "924014123530-kko4ml6m6ffsb70s0pps8n5915nu11k0.apps.googleusercontent.com",
           "client_type": 3
         }
