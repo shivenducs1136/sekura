@@ -61,7 +61,7 @@ class ShakeWorker (appContext: Context, workerParams: WorkerParameters):
 
             // Display a Toast message if
             // acceleration value is over 12
-            if(acceleration > 12){
+            if(acceleration > 50){
                 triggerAlarm()
             }
         }
@@ -69,7 +69,7 @@ class ShakeWorker (appContext: Context, workerParams: WorkerParameters):
     }
 
     private fun triggerAlarm() {
-        mediaPlayer = MediaPlayer.create(applicationContext, R.raw.alarm)
+        mediaPlayer = MediaPlayer.create(applicationContext, R.raw.siren)
         mediaPlayer.start()
     }
 
