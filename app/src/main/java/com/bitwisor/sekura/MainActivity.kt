@@ -3,13 +3,14 @@ package com.bitwisor.sekura
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.FragmentActivity
 import com.bitwisor.sekura.databinding.ActivityLoginBinding
 import com.bitwisor.sekura.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : FragmentActivity() {
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var firebaseAuth : FirebaseAuth
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
            startActivity(intent)
        }
     }
+
+
 
     private fun checkUser() {
        val firebaseUser = firebaseAuth.currentUser

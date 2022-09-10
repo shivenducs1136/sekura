@@ -51,7 +51,9 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/af329b14b14a8924b0f542e5aa571b74/transformed/material-1.6.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/3d5f3b38c2b0b0579d5206e5c63dd870/transformed/appcompat-1.4.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/a15829db36ec2c0b04f6b96b0c18a5fc/transformed/play-services-auth-20.2.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/414d8d9632cb822712d73e6ddc6f6b08/transformed/play-services-maps-18.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/4e3b9497d5c246b817af0f91d1b4eef3/transformed/viewpager2-1.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/a1258512da9009f101e46291d926390b/transformed/play-services-location-20.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/c07a73e0b9b7c7dee126ca87805de23d/transformed/firebase-auth-ktx-21.0.8-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/a68019b3e501c28dfa5fda1f62f05610/transformed/firebase-auth-21.0.8-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/a4e3269e1e340962379fd9716b6f5d9c/transformed/play-services-auth-api-phone-18.0.1-api.jar</arg>
@@ -238,6 +240,8 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-basement:18.1.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-tasks:18.0.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-auth-base:18.0.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-maps:18.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-location:20.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.airbnb.android:lottie:5.2.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: de.hdodenhof:circleimageview:3.1.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-auth-ktx:21.0.8@aar" level="project" />

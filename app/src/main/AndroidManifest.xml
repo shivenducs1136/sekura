@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.bitwisor.sekura">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -14,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sekura"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBWcmNB5qpSe2OK8vWJtX2U8M9TJ_p3jpQ"
+            >
+        </meta-data>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
