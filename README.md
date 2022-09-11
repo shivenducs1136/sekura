@@ -25,5 +25,5 @@ Knowing that technology can't change how people think for women and their right 
 
 ## Some highlights of our application
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/shivenducs1136/sekura/blob/main/screeshot.png)
 
