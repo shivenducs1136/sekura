@@ -7,6 +7,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/sekura.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/sekura.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/sekura.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/sekura.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/sekura.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/sekura.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unityLibrary/sekura.unityLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/unityLibrary/sekura.unityLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unityLibrary/sekura.unityLibrary.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/unityLibrary/sekura.unityLibrary.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unityLibrary/sekura.unityLibrary.main.iml" filepath="$PROJECT_DIR$/.idea/modules/unityLibrary/sekura.unityLibrary.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unityLibrary/sekura.unityLibrary.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/unityLibrary/sekura.unityLibrary.unitTest.iml" />
     </modules>
   </component>
 </project>
