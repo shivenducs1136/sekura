@@ -88,7 +88,7 @@ class fragment_maps : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickLis
                 lastLocation=location
                 val currentLatLong= LatLng(location.latitude,location.longitude)
                 placeMarkerOnMap(currentLatLong)
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong,12f))
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong,16f))
             }
         }
 
