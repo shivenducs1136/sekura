@@ -83,8 +83,7 @@ class HomeFragment : Fragment() {
             callNum(num)
         }
         binding.bluecard.setOnClickListener {
-            var i = Intent(requireActivity(),UnityHandlerActivity::class.java)
-            startActivity(i)
+
 
         }
         binding.c1.setOnClickListener {
@@ -98,6 +97,9 @@ class HomeFragment : Fragment() {
         }
         binding.c4.setOnClickListener {
             callNum("9643294482")
+        }
+        binding.helplineWebView.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_webView_fragment)
         }
     }
     fun callNum(num:String){
