@@ -2,4 +2,16 @@
     <string name="app_name">sekura</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="helpline_nos">
+        <item>POLICE</item>
+        <item>FIRE</item>
+        <item>AMBULANCE</item>
+        <item>Women Helpline</item>
+        <item>Women Helpline - ( Domestic Abuse )</item>
+        <item>Anti Poison ( New Delhi )</item>
+        <item>Senior Citizen Helpline</item>
+        <item>Tourist Helpline</item>
+        <item>CYBER CRIME HELPLINE</item>
+    </string-array>
 </resources>

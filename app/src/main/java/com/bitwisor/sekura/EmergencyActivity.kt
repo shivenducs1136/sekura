@@ -35,8 +35,11 @@ class EmergencyActivity : AppCompatActivity() {
 
     }
     fun startCall(){
-        val callIntent = Intent(Intent.ACTION_CALL)
-        callIntent.data = Uri.parse("tel:9528881662")
-        startActivity(callIntent)
+        val i = Intent(Intent.ACTION_CALL)
+        i.data = Uri.parse("tel:9528881662")
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET or Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT)
+        i.addFlags(Intent.FLAG_GRANT_PREFIX_URI_PERMISSION or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
+        startActivity(i)
     }
 }

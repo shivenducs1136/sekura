@@ -115,6 +115,8 @@
                     app:layout_constraintLeft_toLeftOf="@id/sosCard"
                     android:layout_marginTop="20dp"
                     android:id="@+id/calloptions"
+                    android:layout_marginRight="20dp"
+                    app:layout_constraintRight_toLeftOf="@id/callgreen"
                     app:layout_constraintTop_toBottomOf="@+id/sosCard"
                     >
 
@@ -128,6 +130,17 @@
                         />
 
                 </com.google.android.material.textfield.TextInputLayout>
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/callgreen"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/callgreen"
+                    app:layout_constraintTop_toTopOf="@id/calloptions"
+                    app:layout_constraintBottom_toBottomOf="@id/calloptions"
+                    app:layout_constraintRight_toRightOf="@id/sosCard"
+                    />
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:layout_width="90dp"
