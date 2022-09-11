@@ -373,7 +373,7 @@
                 <com.airbnb.lottie.LottieAnimationView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    app:lottie_rawRes="@raw/add"
+                    app:lottie_rawRes="@raw/areamap"
                     app:layout_constraintTop_toTopOf="@id/c4"
                     app:layout_constraintBottom_toBottomOf="@id/c4"
                     app:layout_constraintLeft_toRightOf="@id/c4"
