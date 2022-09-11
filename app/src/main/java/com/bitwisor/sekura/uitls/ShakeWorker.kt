@@ -70,7 +70,7 @@ class ShakeWorker (appContext: Context, workerParams: WorkerParameters):
 
             // Display a Toast message if
             // acceleration value is over 12
-            if(acceleration > 50){
+            if(acceleration > 60){
                 triggerAlarm()
                 triggerCall()
             }

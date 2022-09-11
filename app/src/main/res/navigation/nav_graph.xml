@@ -9,5 +9,13 @@
         android:id="@+id/homeFragment"
         android:name="com.bitwisor.sekura.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_fragment_maps"
+            app:destination="@id/fragment_maps" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_maps"
+        android:name="com.bitwisor.sekura.fragment_maps"
+        android:label="fragment_maps" />
 </navigation>

@@ -50,6 +50,10 @@ class HomeFragment : Fragment() {
             requireActivity().startActivity(i)
         }
 
+        binding.locateBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_fragment_maps)
+        }
+
     }
 
 }
