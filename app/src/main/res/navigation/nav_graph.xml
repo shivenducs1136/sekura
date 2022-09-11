@@ -13,9 +13,17 @@
         <action
             android:id="@+id/action_homeFragment_to_fragment_maps"
             app:destination="@id/fragment_maps" />
+        <action
+            android:id="@+id/action_homeFragment_to_webView_fragment"
+            app:destination="@id/webView_fragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_maps"
         android:name="com.bitwisor.sekura.fragment_maps"
         android:label="fragment_maps" />
+    <fragment
+        android:id="@+id/webView_fragment"
+        android:name="com.bitwisor.sekura.webView_fragment"
+        android:label="fragment_web_view_fragment"
+        tools:layout="@layout/fragment_web_view_fragment" />
 </navigation>
