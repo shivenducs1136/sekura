@@ -7,6 +7,10 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.media.MediaPlayer
+import android.os.Build
+import android.os.VibrationEffect
+import android.os.Vibrator
+import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.work.Worker
 import androidx.work.WorkerParameters
@@ -71,6 +75,16 @@ class ShakeWorker (appContext: Context, workerParams: WorkerParameters):
     private fun triggerAlarm() {
         mediaPlayer = MediaPlayer.create(applicationContext, R.raw.siren)
         mediaPlayer.start()
+
+        val v= (applicationContext.getSystemService(Context.VIBRATOR_SERVICE)as Vibrator)
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            v.vibrate(VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE))
+
+        }
+        else{
+            v.vibrate(1000)
+        }
     }
 
 //    override fun onResume() {

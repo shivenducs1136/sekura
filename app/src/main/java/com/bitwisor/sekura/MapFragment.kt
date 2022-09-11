@@ -19,7 +19,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 
-class fragment_maps : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+class MapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private lateinit var mMap: GoogleMap
 
@@ -44,7 +44,7 @@ class fragment_maps : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickLis
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val mapFragment = childFragmentManager.findFragmentById(R.id.maps) as SupportMapFragment
+        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
 
@@ -74,8 +74,8 @@ class fragment_maps : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickLis
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
                 android.Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
+            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(requireContext(),android.Manifest.permission.ACCESS_COARSE_LOCATION)!=
+        PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(requireActivity(), arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
                 LOCATION_REQUEST_CODE)
 
@@ -88,10 +88,24 @@ class fragment_maps : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickLis
                 lastLocation=location
                 val currentLatLong= LatLng(location.latitude,location.longitude)
                 placeMarkerOnMap(currentLatLong)
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong,12f))
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong,15f))
             }
         }
 
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        when(requestCode){
+            LOCATION_REQUEST_CODE -> if(grantResults.isNotEmpty() && grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                setUpMap()
+            }
+        }
     }
 
     private fun placeMarkerOnMap(currentLatLong: LatLng) {
