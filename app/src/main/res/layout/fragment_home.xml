@@ -12,143 +12,384 @@
         android:layout_height="match_parent"
         tools:context=".fragments.HomeFragment">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/appname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/balsamiq_sans_bold"
-                android:text="Sekura"
-                android:textColor="@color/lightpink"
-                android:textSize="24dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:layout_constraintTop_toTopOf="@id/appname"
-                app:layout_constraintBottom_toBottomOf="@id/appname"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/idl_profile"
-                android:padding="2dp"
-                app:civ_border_width="1dp"
-                app:civ_border_color="@color/black" />
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                app:lottie_rawRes="@raw/emergency"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:layout_constraintTop_toTopOf="@id/sosCard"
-                app:layout_constraintBottom_toTopOf="@id/sosCard"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:elevation="10dp"
-                />
-            <com.google.android.material.card.MaterialCardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                app:layout_constraintTop_toBottomOf="@id/appname"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                app:cardCornerRadius="20dp"
-                android:id="@+id/sosCard"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
                 >
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/white_bottomround_card"
-                    android:padding="25dp"
-                    android:id="@+id/callbtn"
-                    >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Emergency Call !"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="20dp"
+                    android:text="Actions"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/balsamiq_sans_bold"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/appname"
+                    app:layout_constraintLeft_toLeftOf="@id/bluecard"
+                    android:id="@+id/action"
+                    />
+                <TextView
+                    android:id="@+id/appname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/balsamiq_sans_bold"
+                    android:text="Sekura"
+                    android:textColor="@color/lightpink"
+                    android:textSize="24dp"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:textStyle="bold"
-                    android:id="@+id/emergencyCall"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toTopOf="@id/appname"
+                    app:layout_constraintBottom_toBottomOf="@id/appname"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/idl_profile"
+                    android:padding="2dp"
+                    app:civ_border_width="1dp"
+                    android:id="@+id/profile_img"
+                    app:civ_border_color="@color/black" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:lottie_rawRes="@raw/emergency"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:layout_constraintTop_toTopOf="@id/sosCard"
+                    app:layout_constraintBottom_toTopOf="@id/sosCard"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:elevation="10dp"
                     />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </com.google.android.material.card.MaterialCardView>
-            <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                app:lottie_rawRes="@raw/fight"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:layout_constraintTop_toTopOf="@+id/bluecard"
-                app:layout_constraintBottom_toBottomOf="@id/bluecard"
-                app:layout_constraintLeft_toLeftOf="@id/bluecard"
-                android:elevation="5dp"
-                android:id="@+id/fight1"
-                />
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                app:cardCornerRadius="20dp"
-                app:layout_constraintTop_toBottomOf="@id/sosCard"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:id="@+id/bluecard"
-                >
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/blue"
-                    android:padding="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintTop_toBottomOf="@id/action"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="20dp"
+                    android:id="@+id/sosCard"
                     >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Learn to Fight"
-                        android:textColor="@color/white"
-                        android:textSize="24sp"
-                        android:autoSizeTextType="uniform"
-                        android:textAlignment="center"
-                        android:maxLines="1"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        android:textStyle="bold"
-                        android:id="@+id/blueCardtxt"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/white_bottomround_card"
+                        android:padding="25dp"
+                        android:id="@+id/callbtn"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Emergency Call !"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:textStyle="bold"
+                            android:id="@+id/emergencyCall"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/sosCard"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/calloptions"
+                    app:layout_constraintTop_toBottomOf="@+id/sosCard"
+                    >
+
+                    <!-- Inside text input layout add
+                          an auto complete text view
+                            and make its input type to none-->
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:text="Helpline Numbers"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:lottie_rawRes="@raw/fight"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:layout_constraintTop_toTopOf="@+id/bluecard"
+                    app:layout_constraintBottom_toBottomOf="@id/bluecard"
+                    app:layout_constraintLeft_toLeftOf="@id/bluecard"
+                    android:elevation="5dp"
+                    android:id="@+id/fight1"
                     />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/calloptions"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/bluecard"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue"
+                        android:padding="25dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Learn to Fight"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:autoSizeTextType="uniform"
+                            android:textAlignment="center"
+                            android:maxLines="1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:textStyle="bold"
+                            android:id="@+id/blueCardtxt"
+                            />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            </com.google.android.material.card.MaterialCardView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text=""
-                app:layout_constraintTop_toBottomOf="@id/bluecard"
-                app:layout_constraintLeft_toLeftOf="@id/bluecard"
-                />
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Trusted Contacts"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/balsamiq_sans_bold"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/bluecard"
+                    app:layout_constraintLeft_toLeftOf="@id/bluecard"
+                    android:id="@+id/trusted_contacts"
+                    />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/trusted_contacts"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:layout_constraintLeft_toLeftOf="@id/bluecard"
+                    android:id="@+id/c1"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/utkarsh_img"
+                            android:id="@+id/m1"
+                            />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="Utkarsh Arora"
+                            android:autoSizeTextType="uniform"
+                            android:maxLines="2"
+                            android:maxWidth="70dp"
+                            app:layout_constraintTop_toBottomOf="@id/m1"
+                            android:id="@+id/t1"
+                            android:textAlignment="center"
+                            app:layout_constraintLeft_toLeftOf="@id/m1"
+                            app:layout_constraintRight_toRightOf="@id/m1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:padding="5dp"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/c1"
+                    app:layout_constraintBottom_toBottomOf="@id/c1"
+                    app:layout_constraintLeft_toRightOf="@id/c1"
+                    app:cardBackgroundColor="#FFFFFF"
+                    android:id="@+id/c2"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/yashasvi_img"
+                            android:id="@+id/m2"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yashasvi Baliyan"
+                            android:autoSizeTextType="uniform"
+                            android:maxLines="2"
+                            android:maxWidth="70dp"
+                            android:textColor="@color/black"
+                            app:layout_constraintTop_toBottomOf="@id/m2"
+                            android:id="@+id/t2"
+                            android:textAlignment="center"
+                            app:layout_constraintLeft_toLeftOf="@id/m2"
+                            app:layout_constraintRight_toRightOf="@id/m2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:padding="5dp"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/c2"
+                    app:layout_constraintBottom_toBottomOf="@id/c2"
+                    app:layout_constraintLeft_toRightOf="@id/c2"
+                    app:cardBackgroundColor="#FFFFFF"
+                    android:id="@+id/c3"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/shivendu_img"
+                            android:id="@+id/m3"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shivendu Mishra"
+                            android:autoSizeTextType="uniform"
+                            android:maxLines="2"
+                            android:maxWidth="70dp"
+                            app:layout_constraintTop_toBottomOf="@id/m3"
+                            android:id="@+id/t3"
+                            android:textAlignment="center"
+                            app:layout_constraintLeft_toLeftOf="@id/m3"
+                            app:layout_constraintRight_toRightOf="@id/m3"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:textColor="@color/black"
+                            android:padding="5dp"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/c3"
+                    app:layout_constraintBottom_toBottomOf="@id/c3"
+                    app:layout_constraintLeft_toRightOf="@id/c3"
+                    app:cardBackgroundColor="#FFFFFF"
+                    android:id="@+id/c4"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/yashveer_img"
+                            android:id="@+id/m4"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yashveer Singh"
+                            android:autoSizeTextType="uniform"
+                            android:maxLines="2"
+                            android:maxWidth="70dp"
+                            app:layout_constraintTop_toBottomOf="@id/m4"
+                            android:id="@+id/t4"
+                            android:textAlignment="center"
+                            app:layout_constraintLeft_toLeftOf="@id/m4"
+                            app:layout_constraintRight_toRightOf="@id/m4"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:lottie_rawRes="@raw/add"
+                    app:layout_constraintTop_toTopOf="@id/c4"
+                    app:layout_constraintBottom_toBottomOf="@id/c4"
+                    app:layout_constraintLeft_toRightOf="@id/c4"
+                    android:layout_marginLeft="5dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    android:elevation="5dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
 
     </FrameLayout>
 </layout>
