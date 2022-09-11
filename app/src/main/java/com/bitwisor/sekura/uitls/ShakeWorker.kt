@@ -9,6 +9,9 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.media.MediaPlayer
 import android.net.Uri
+import android.os.Build
+import android.os.VibrationEffect
+import android.os.Vibrator
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.content.ContextCompat.startActivity
 import androidx.work.Worker
@@ -78,12 +81,24 @@ class ShakeWorker (appContext: Context, workerParams: WorkerParameters):
     private fun triggerCall() {
         val i= Intent(context,EmergencyActivity::class.java)
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET or Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT)
+        i.addFlags(Intent.FLAG_GRANT_PREFIX_URI_PERMISSION or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
         context.startActivity(i)
     }
 
     private fun triggerAlarm() {
         mediaPlayer = MediaPlayer.create(applicationContext, R.raw.siren)
         mediaPlayer.start()
+
+        val v= (applicationContext.getSystemService(Context.VIBRATOR_SERVICE)as Vibrator)
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            v.vibrate(VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE))
+
+        }
+        else{
+            v.vibrate(1000)
+        }
     }
 
 
