@@ -32,8 +32,19 @@ class LoginActivity : AppCompatActivity() {
         private const val TAG = "GOOGLE_SIGN_IN_TAG"
 
     }
+
+    override fun onStart() {
+        super.onStart()
+        firebaseAuth = FirebaseAuth.getInstance()
+        if(firebaseAuth.currentUser!=null){
+            val i = Intent(this,MainActivity::class.java)
+            startActivity(i)
+            finish()
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         firebaseAuth =Firebase.auth

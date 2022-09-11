@@ -118,9 +118,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/sosCard"
                     >
 
-                    <!-- Inside text input layout add
-                          an auto complete text view
-                            and make its input type to none-->
                     <AutoCompleteTextView
                         android:id="@+id/autoCompleteTextView"
                         android:layout_width="match_parent"
@@ -385,6 +382,7 @@
                     app:lottie_autoPlay="true"
                     app:lottie_loop="true"
                     android:elevation="5dp"
+                    android:id="@+id/locateBtn"
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
